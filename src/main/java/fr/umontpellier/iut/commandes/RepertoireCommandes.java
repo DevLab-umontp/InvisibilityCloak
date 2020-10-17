@@ -36,6 +36,7 @@ public class RepertoireCommandes {
 
     static {
         REPERTOIRE_DES_COMMANDES.put("help", new Help());
+        REPERTOIRE_DES_COMMANDES.put("send", new Send());
     }
 
     /**
