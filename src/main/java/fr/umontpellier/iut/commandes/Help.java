@@ -21,7 +21,7 @@ public class Help implements Commande {
      */
     @Override
     public void execute(Message messageRecue) {
-        String reponse = " La demande d'aide a été entendue.";
+        String reponse = "**Commandes Invisibility Cloak :**\nhttps://github.com/DevLab-umontp/InvisibilityCloak.umontp";
         messageRecue.getChannel().sendMessage(reponse).queue();
     }
 
