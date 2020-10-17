@@ -14,24 +14,25 @@ public class Send implements Commande {
             TextChannel textChannel = getTextChannel(messageSplit[1], messageRecue.getAuthor());
             String messageText = messageSplit[2];
             textChannel.sendMessage(messageText).queue();
-        } catch (IdTextChannelInconnueException e) {
+        } catch (NomChannelDoublonException | NomChannelIntrouvableException e) {
             messageRecue.getChannel().sendMessage(e.getMessage()).queue();
         }
     }
 
-    public TextChannel getTextChannel(String idChannel, User user) throws IdTextChannelInconnueException {
-        try {
-            long id = Long.parseLong(idChannel);
-            for (Guild guild : user.getMutualGuilds()) {
-                TextChannel textChannel = guild.getTextChannelById(id);
-                if (textChannel != null)
-                    return textChannel;
+    public TextChannel getTextChannel(String nomChannel, User user)
+            throws NomChannelDoublonException, NomChannelIntrouvableException {
+        for (Guild guild : user.getMutualGuilds()) {
+            TextChannel[] textChannel = guild.getTextChannelsByName(nomChannel, true).toArray(new TextChannel[0]);
+            if (textChannel.length != 0) {
+                if (textChannel.length == 1)
+                    return textChannel[0];
+                else
+                    throw new NomChannelDoublonException();
             }
-        } catch (NumberFormatException n) {
-            throw new IdTextChannelInconnueException("*L'ID du channel renseigné ne doit comporter que des chiffres.*");
         }
-        throw new IdTextChannelInconnueException("*l'ID du channel n'a pas pus être trouvé dans les serveurs que nous avons en commun*");
-
+        throw new NomChannelIntrouvableException();
     }
+    // TODO gérer l'exception où l'on trouve le même nom de channel sur plusieurs
+    // serveur différents
 
 }
