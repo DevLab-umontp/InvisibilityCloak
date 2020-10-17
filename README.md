@@ -1,3 +1,5 @@
+![GitHub Actions](https://github.com/DevLab-umontp/InvisibilityCloak.umontp/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 # <img src="./ressources/logo.png" alt="Logo" width="125"/> InvisibilityCloak.umontp
 ### IUT Montpellier-Sète – Département Informatique
 * **Colaborateurs:** [étudiants du département informatique](https://iut-montpellier-sete.edu.umontpellier.fr/dut-informatique/)
