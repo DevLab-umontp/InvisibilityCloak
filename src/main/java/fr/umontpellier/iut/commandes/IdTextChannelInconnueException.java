@@ -1,8 +1,8 @@
 package fr.umontpellier.iut.commandes;
 
-public class IdInconnueException extends IllegalArgumentException {
+public class IdTextChannelInconnueException extends Exception {
 
-    public IdInconnueException(String argo0) {
+    public IdTextChannelInconnueException(String argo0) {
         super(argo0);
 	}
 
