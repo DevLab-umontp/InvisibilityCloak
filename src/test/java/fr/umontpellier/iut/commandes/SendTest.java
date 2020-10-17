@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
+import fr.umontpellier.iut.commandes.exceptions.IdTextChannelInconnueException;
+
 class SendTest {
     @Test
     void test_getTextChannel_with_IDNotValid_should_throws_IdInconnueException() {

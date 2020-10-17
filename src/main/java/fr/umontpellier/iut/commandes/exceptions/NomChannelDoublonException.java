@@ -1,4 +1,4 @@
-package fr.umontpellier.iut.commandes;
+package fr.umontpellier.iut.commandes.exceptions;
 
 public class NomChannelDoublonException extends Exception {
 

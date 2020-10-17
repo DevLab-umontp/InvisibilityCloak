@@ -1,5 +1,7 @@
 package fr.umontpellier.iut.commandes;
 
+import fr.umontpellier.iut.commandes.exceptions.NomChannelDoublonException;
+import fr.umontpellier.iut.commandes.exceptions.NomChannelIntrouvableException;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
