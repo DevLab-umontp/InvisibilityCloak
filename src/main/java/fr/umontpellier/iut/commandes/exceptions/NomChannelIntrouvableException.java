@@ -13,7 +13,4 @@ public class NomChannelIntrouvableException extends Exception {
         super("*Le nom du channel n'a pas pus être trouvé dans les serveurs que nous avons en commun*");
     }
 
-
-    
-    
 }

@@ -12,5 +12,5 @@ public class NomChannelDoublonException extends Exception {
     public NomChannelDoublonException() {
         super("Plusieurs channels du même nom on étaient trouvés, veuillez utiliser l'id du channel au lieu du nom.\nhttps://github.com/DevLab-umontp/InvisibilityCloak.umontp");
     }
-    
+
 }
