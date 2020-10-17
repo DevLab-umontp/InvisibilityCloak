@@ -10,11 +10,13 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
  * <p>
  * Elle est caractérisée par :
  * <ul>
- * <li>Une {@code HashMap} qui associe un mot {@code String} à une {@code Commande}</li>
+ * <li>Une {@code HashMap} qui associe un mot {@code String} à une
+ * {@code Commande}</li>
  * </ul>
  * </p>
  * <p>
- *  A noter que {@link #REPERTOIRE_DES_COMMANDES} est automatiquement initialisé en static. 
+ * A noter que {@link #REPERTOIRE_DES_COMMANDES} est automatiquement initialisé
+ * en static.
  * </p>
  * 
  * @see HashMap
@@ -37,12 +39,11 @@ public class RepertoireCommandes {
     }
 
     /**
-     * 
-     * Retourne la commande associée au premier mot contenue dans le message
+     * Retourne la commande associée au message
      * 
      * @param msg {@code  MessageReceivedEvent} message reçue par un serveur Discord
      * 
-     * @return {@code Commande} 
+     * @return {@code Commande}
      * 
      * @see RepertoireCommandes#REPERTOIRE_DES_COMMANDES
      * @see java.util.HashMap#get(java.lang.Object)
@@ -52,7 +53,6 @@ public class RepertoireCommandes {
         String motClef = getPremierMotDuMessage(msg);
         return REPERTOIRE_DES_COMMANDES.get(motClef);
     }
-
 
     /**
      * Retourne le premier mot contenue dans le message reçue du serveur
@@ -65,7 +65,7 @@ public class RepertoireCommandes {
      * @see net.dv8tion.jda.api.entities.Message#getContentRaw()
      */
     private static String getPremierMotDuMessage(MessageReceivedEvent msg) {
-        return msg.getMessage().getContentRaw().substring(1).split(" ")[0].toLowerCase();
+        return msg.getMessage().getContentRaw().substring(1).split(" ", 2)[0].toLowerCase();
     }
 
     private RepertoireCommandes() {

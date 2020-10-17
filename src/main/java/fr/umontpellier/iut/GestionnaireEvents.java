@@ -1,7 +1,5 @@
 package fr.umontpellier.iut;
 
-import static java.lang.System.out;
-
 import fr.umontpellier.iut.commandes.Commande;
 import fr.umontpellier.iut.commandes.RepertoireCommandes;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
