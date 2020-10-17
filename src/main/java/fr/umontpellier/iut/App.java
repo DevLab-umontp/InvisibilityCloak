@@ -1,10 +1,9 @@
 package fr.umontpellier.iut;
 
-import java.util.Scanner;
-
 import javax.security.auth.login.LoginException;
 
 import net.dv8tion.jda.api.*;
+import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.utils.Compression;
 
 public class App {
@@ -12,7 +11,8 @@ public class App {
      *
      */
     private static final JDABuilder ANIMAGUS_BUILDER = new JDABuilder(AccountType.BOT)
-            .addEventListeners(new GestionnaireEvents()).setCompression(Compression.NONE);
+            .setActivity(Activity.listening("!help")).addEventListeners(new GestionnaireEvents())
+            .setCompression(Compression.NONE);
 
     public static void main(String[] args) {
         verifieArguments(args);
