@@ -13,7 +13,7 @@ Par-fait ! Ce bot Discord est justement inspiré de la [*Cape d'invisibilité*](
 ## Comment porter la cape sur votre serveur favori
 ### Première étape : récupérer le nom du channel
 
-Petite astuce pour récupérer le nom d'un channel : écrivez le symbole `#` dans l'un des channels du serveur récupérer directement le nom d'un channel.
+Petite astuce pour récupérer le nom d'un channel : écrivez le symbole `#` dans l'un des channels du serveur pour récupérer directement le nom d'un channel.
 
 <img src="./ressources/image.png" alt="écrivez le symbole `#` dans l'un des channels du serveur récupérer directement le nom d'un channel" width="500"/>
 
