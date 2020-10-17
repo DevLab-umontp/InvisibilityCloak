@@ -24,7 +24,12 @@ Une fois le nom du channel copié, envoyez en message privé votre commande `!se
 Bien sûr avant d'envoyez la commande assurez-vous que le serveur est en commun avec le bot, [(s'il ne l'est pas, invitez le sur le serveur en cliquant ici)](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0).
 
 ### Finish !!
-Le message est maintenant disponible sur le channel !
+Le message anonyme est maintenant disponible sur le channel !
+
+*Vous voilà invisible !*
+
+![](./ressources/invisibiliy-work.gif)
+
 #### Voici les différentes commandes d'*InvisibilityCloak.umontp* : 
 - `!help` : avoir un apperçue des commandes
 - `!feed-back` : faire un retour sur le bot 
