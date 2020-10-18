@@ -35,4 +35,5 @@ Le message anonyme est maintenant disponible sur le channel !
 #### Voici les différentes commandes d'*InvisibilityCloak.umontp* : 
 - `!help` : avoir un apperçue des commandes
 - `!feed-back` : faire un retour sur le bot 
-- `!send {nom-du-channel} {message}` : envoyer un message de manière annonyme sur le channel.
+- `!send {nom-du-channel} {message}` : envoyer un message de manière annonyme sur le channel, en utilisant le nom du channel.
+- `!sendById {ID-du-channel} {message}` : envoyer un message de manière annonyme sur le channel, en utilisant l'ID du channel.
