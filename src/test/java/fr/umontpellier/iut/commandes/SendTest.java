@@ -4,12 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
-import fr.umontpellier.iut.commandes.exceptions.IdTextChannelInconnueException;
+import fr.umontpellier.iut.commandes.exceptions.IDTextChannelFormatException;
 
 class SendTest {
     @Test
     void test_getTextChannel_with_IDNotValid_should_throws_IdInconnueException() {
-        Send send = new Send();
-        assertThrows(IdTextChannelInconnueException.class, () -> send.getTextChannel("ID non valide", null));
+        SendById send = new SendById();
+        assertThrows(IDTextChannelFormatException.class, () -> send.getTextChannelById("ID non valide", null));
     }
 }

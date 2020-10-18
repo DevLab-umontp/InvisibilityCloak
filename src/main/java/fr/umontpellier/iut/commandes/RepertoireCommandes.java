@@ -36,7 +36,10 @@ public class RepertoireCommandes {
 
     static {
         REPERTOIRE_DES_COMMANDES.put("help", new Help());
-        REPERTOIRE_DES_COMMANDES.put("send", new Send());
+        REPERTOIRE_DES_COMMANDES.put("send", new SendByName());
+        REPERTOIRE_DES_COMMANDES.put("sendByName", new SendByName());
+        REPERTOIRE_DES_COMMANDES.put("sendById", new SendById());
+        REPERTOIRE_DES_COMMANDES.put("sendId", new SendById());
         REPERTOIRE_DES_COMMANDES.put("feed-back", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("feedback", new FeedBack());
     }
