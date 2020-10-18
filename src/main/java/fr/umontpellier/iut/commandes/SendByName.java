@@ -1,6 +1,6 @@
 package fr.umontpellier.iut.commandes;
 
-import fr.umontpellier.iut.commandes.exceptions.NeedInformationUserException;
+import fr.umontpellier.iut.commandes.exceptions.UtilisateurAFaitMauvaiseCommandeException;
 import fr.umontpellier.iut.commandes.exceptions.NomChannelDoublonException;
 import fr.umontpellier.iut.commandes.exceptions.NomChannelIntrouvableException;
 import net.dv8tion.jda.api.entities.Guild;
@@ -10,12 +10,12 @@ import net.dv8tion.jda.api.entities.User;
 public class SendByName implements Send {
 
     @Override
-    public void execute(String textChannelInput, String message, User user) throws NeedInformationUserException {
+    public void execute(String textChannelInput, String message, User user) throws UtilisateurAFaitMauvaiseCommandeException {
         try {
             TextChannel textChannel = getTextChannelByName(textChannelInput, user);
             textChannel.sendMessage(message).queue();
         } catch (NomChannelDoublonException | NomChannelIntrouvableException e) {
-            throw new NeedInformationUserException(e.getMessage());
+            throw new UtilisateurAFaitMauvaiseCommandeException(e.getMessage());
         }
     }
 

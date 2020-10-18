@@ -1,6 +1,6 @@
 package fr.umontpellier.iut.commandes.exceptions;
 
-public class IDTextChannelNonTrouve extends Exception {
+public class IDTextChannelNonTrouveException extends Exception {
 
     /**
      *
@@ -9,7 +9,7 @@ public class IDTextChannelNonTrouve extends Exception {
 
     /**
      */
-    public IDTextChannelNonTrouve() {
+    public IDTextChannelNonTrouveException() {
         super("*l'ID du channel n'a pas pus être trouvé dans les serveurs que nous avons en commun*");
     }
 
