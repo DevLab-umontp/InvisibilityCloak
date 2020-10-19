@@ -4,6 +4,9 @@
 ### IUT Montpellier-Sète – Département Informatique
 * **Colaborateurs:** [étudiants du département informatique](https://iut-montpellier-sete.edu.umontpellier.fr/dut-informatique/)
 
+
+[<img src="./ressources/invitation-bot.png" alt="Harry potter met la cape d'invisibilité" width="180"/>](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0)
+
 ## Présentation
 Vous révez de porter la cape d'invisibilité sur l'un de vos serveur Discord ? 
 
