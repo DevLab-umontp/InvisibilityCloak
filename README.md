@@ -5,7 +5,7 @@
 * **Colaborateurs:** [étudiants du département informatique](https://iut-montpellier-sete.edu.umontpellier.fr/dut-informatique/)
 
 
-[<img src="./ressources/invitation-bot.png" alt="Invitation du bot InvisibilityCloak" width="180"/>](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0)
+[<img src="./ressources/invitation-bot.png" alt="Invitation du bot InvisibilityCloak sur un serveur Discord" width="180"/>](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0)
 
 ## Présentation
 Vous révez de porter la cape d'invisibilité sur l'un de vos serveur Discord ? 
@@ -26,7 +26,7 @@ Petite astuce pour récupérer le nom d'un channel : écrivez le symbole `#` dan
 
 Une fois le nom du channel copié, envoyez en message privé votre commande `!send {nom-du-channel} {votre message anonyme}`  à **InvisibilityCloak.umontp**.
 
-Bien sûr avant d'envoyez la commande assurez-vous que le serveur est en commun avec le bot, [(s'il ne l'est pas, invitez le sur le serveur en cliquant ici)](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0).
+Bien sûr avant d'envoyez la commande assurez-vous que le serveur soit en commun avec le bot, [(s'il ne l'est pas, invitez-le sur le serveur en cliquant ici)](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0).
 
 ### Finish !!
 Le message anonyme est maintenant disponible sur le channel !
