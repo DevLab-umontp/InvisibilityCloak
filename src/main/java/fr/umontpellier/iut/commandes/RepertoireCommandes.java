@@ -36,6 +36,8 @@ public class RepertoireCommandes {
 
     static {
         REPERTOIRE_DES_COMMANDES.put("help", new Help());
+        REPERTOIRE_DES_COMMANDES.put("bug", new Bug());
+        REPERTOIRE_DES_COMMANDES.put("bogue", new Bug());
         REPERTOIRE_DES_COMMANDES.put("send", new SendByName());
         REPERTOIRE_DES_COMMANDES.put("sendbyname", new SendByName());
         REPERTOIRE_DES_COMMANDES.put("sendbyid", new SendById());
