@@ -22,20 +22,27 @@ public class SendByName implements Send {
 
     public TextChannel getTextChannelByName(String nomChannel, User user)
             throws NomChannelDoublonException, NomChannelIntrouvableException {
+        TextChannel textChannelTrouve = rechercheTextChannelCorrespondant(nomChannel, user);
+        if (textChannelTrouve == null && nomChannel.charAt(0) == '#') // L'utilisateur a mit malencontreusement le # devant le nom du channel
+            textChannelTrouve = rechercheTextChannelCorrespondant(nomChannel.substring(1), user);
+        if (textChannelTrouve != null)
+            return textChannelTrouve;
+        throw new NomChannelIntrouvableException();
+    }
+
+    private TextChannel rechercheTextChannelCorrespondant(String nomChannel, User user)
+            throws NomChannelDoublonException {
+        TextChannel textChannelTrouve = null;
         for (Guild guild : user.getMutualGuilds()) {
-            TextChannel[] textChannel = guild.getTextChannelsByName(nomChannel, true).toArray(new TextChannel[0]);
-            if (textChannel.length != 0) {
-                if (textChannel.length == 1)
-                    return textChannel[0];
+            TextChannel[] textChannels = guild.getTextChannelsByName(nomChannel, true).toArray(new TextChannel[0]);
+            if (textChannels.length != 0) {
+                if (textChannels.length == 1 && textChannelTrouve == null)
+                    textChannelTrouve = textChannels[0];
                 else
                     throw new NomChannelDoublonException();
             }
         }
-        if (nomChannel.charAt(0) == '#') // Gestion du cas où l'utilisateur utilise malencontreusement le # dans le nom du channel
-            getTextChannelByName(nomChannel.substring(1), user);
-        throw new NomChannelIntrouvableException();
+        return textChannelTrouve;
     }
-    // TODO gérer l'exception où l'on trouve le même nom de channel sur plusieurs
-    // serveur différents
 
 }
