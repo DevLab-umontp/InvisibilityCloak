@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import fr.umontpellier.iut.commandes.exceptions.IDTextChannelFormatException;
 
-class SendTest {
+class SendByIdTest {
     @Test
     void test_getTextChannel_with_IDNotValid_should_throws_IdInconnueException() {
         SendById send = new SendById();
