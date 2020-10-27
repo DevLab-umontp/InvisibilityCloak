@@ -11,7 +11,7 @@ interface Send extends Commande {
     default void execute(Message messageRecue) {
         String[] messageSplit = messageRecue.getContentRaw().split(" ", 3);
         if (messageSplit.length != 3)
-            messageRecue.getChannel().sendMessage("Je n'ai malheureusement pas comprit votre commande, voici toutes le commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr").queue();
+            messageRecue.getChannel().sendMessage("Je n'ai malheureusement pas comprit votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr").queue();
         else
             try {
                 execute(messageSplit[1], messageSplit[2], messageRecue.getAuthor());
