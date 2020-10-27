@@ -8,9 +8,9 @@ import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
-public class ChercheurChannel {
+public class ChercheurChannelMutuel {
 
-    public static TextChannel getTextChannelById(String idChannel, User user)
+    public static TextChannel getTextChannelAvecId(String idChannel, User user)
             throws IDTextChannelFormatException, IDTextChannelIntrouvableException {
         try {
             long id = Long.parseLong(idChannel);
@@ -28,8 +28,8 @@ public class ChercheurChannel {
     public static TextChannel getTextChannelByName(String nomChannel, User user)
             throws NomChannelDoublonException, NomChannelIntrouvableException {
         TextChannel textChannelTrouve = rechercheTextChannelCorrespondant(nomChannel, user);
-        if (textChannelTrouve == null && nomChannel.charAt(0) == '#') // L'utilisateur a mit malencontreusement le #
-                                                                      // devant le nom du channel
+        // L'utilisateur a oublier d'enlever le # devant le nom du channel
+        if (textChannelTrouve == null && nomChannel.charAt(0) == '#')
             textChannelTrouve = rechercheTextChannelCorrespondant(nomChannel.substring(1), user);
         if (textChannelTrouve != null)
             return textChannelTrouve;
@@ -51,7 +51,7 @@ public class ChercheurChannel {
         return textChannelTrouve;
     }
 
-    private ChercheurChannel() {
+    private ChercheurChannelMutuel() {
         throw new IllegalStateException("Utility class");
     }
 }
