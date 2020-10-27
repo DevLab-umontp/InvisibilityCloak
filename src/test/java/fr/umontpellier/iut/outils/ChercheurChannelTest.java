@@ -1,11 +1,10 @@
-package fr.umontpellier.iut.commandes;
+package fr.umontpellier.iut.outils;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 
 import fr.umontpellier.iut.commandes.exceptions.IDTextChannelFormatException;
-import fr.umontpellier.iut.outils.ChercheurChannelMutuel;
 
 class ChercheurChannelTest {
     @Test
