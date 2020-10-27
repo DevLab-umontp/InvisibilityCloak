@@ -2,6 +2,8 @@ package fr.umontpellier.iut.commandes;
 
 import java.util.HashMap;
 
+import fr.umontpellier.iut.commandes.send.SendById;
+import fr.umontpellier.iut.commandes.send.SendByName;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 /**
