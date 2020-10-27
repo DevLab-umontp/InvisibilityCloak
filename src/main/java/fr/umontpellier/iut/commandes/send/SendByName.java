@@ -1,4 +1,4 @@
-package fr.umontpellier.iut.commandes;
+package fr.umontpellier.iut.commandes.send;
 
 import fr.umontpellier.iut.commandes.exceptions.UtilisateurAFaitUneMauvaiseCommandeException;
 import fr.umontpellier.iut.commandes.exceptions.NomChannelDoublonException;

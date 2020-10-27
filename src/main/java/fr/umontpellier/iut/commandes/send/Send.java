@@ -1,10 +1,11 @@
-package fr.umontpellier.iut.commandes;
+package fr.umontpellier.iut.commandes.send;
 
+import fr.umontpellier.iut.commandes.Commande;
 import fr.umontpellier.iut.commandes.exceptions.UtilisateurAFaitUneMauvaiseCommandeException;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.User;
 
-public interface Send extends Commande {
+interface Send extends Commande {
 
     @Override
     default void execute(Message messageRecue) {
