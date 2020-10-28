@@ -4,9 +4,6 @@ import java.util.HashMap;
 
 import fr.umontpellier.iut.commandes.send.SendById;
 import fr.umontpellier.iut.commandes.send.SendByName;
-import fr.umontpellier.iut.commandes.setpseudo.SetPseudoIDGuilde;
-import fr.umontpellier.iut.commandes.setpseudo.SetPseudoNomChannel;
-import fr.umontpellier.iut.commandes.setpseudo.SetPseudoNomGuilde;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 /**
@@ -48,11 +45,6 @@ public class RepertoireCommandes {
         REPERTOIRE_DES_COMMANDES.put("sendid", new SendById());
         REPERTOIRE_DES_COMMANDES.put("feed-back", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("feedback", new FeedBack());
-        REPERTOIRE_DES_COMMANDES.put("setPseudo", new SetPseudoNomGuilde());
-        REPERTOIRE_DES_COMMANDES.put("setPseudoNomGuilde", new SetPseudoNomGuilde());
-        REPERTOIRE_DES_COMMANDES.put("setPseudoIDGuilde", new SetPseudoIDGuilde());
-        REPERTOIRE_DES_COMMANDES.put("setPseudoIDChannel", new SetPseudoIDGuilde());
-        REPERTOIRE_DES_COMMANDES.put("setPseudoNomChannel", new SetPseudoNomChannel());
     }
 
     /**
