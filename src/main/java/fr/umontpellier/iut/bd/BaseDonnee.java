@@ -1,8 +1,13 @@
 package fr.umontpellier.iut.bd;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 import java.util.Scanner;
+import com.mysql.cj.jdbc.Driver;
 
 import fr.umontpellier.iut.GestionnairePseudonyme;
 import net.dv8tion.jda.api.entities.TextChannel;
@@ -40,10 +45,14 @@ public class BaseDonnee {
         connectionProps.put("user", userName);
         connectionProps.put("password", password);
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:" + dbms + "://" + serverName + ":" + portNumber + "/",
                     connectionProps);
         } catch (SQLException e) {
             System.out.println("La connexion n'a pas pu être effectué !");
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Le fichier .jar n'as pas pus être trouvé");
             e.printStackTrace();
         }
     }
