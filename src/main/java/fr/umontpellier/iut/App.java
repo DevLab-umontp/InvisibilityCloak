@@ -24,16 +24,16 @@ public class App {
 
     private static void initBaseDonnee(String[] args) {
         if (verifieArgumentsPourConnexionBD(args))
-            BaseDonnee.setConnection(args[1], args[2], args[3], args[4], args[5]);
+            BaseDonnee.setConnection(args[1], args[2], args[3], args[4], args[5], args[6]);
         else
             BaseDonnee.setConnection(new Scanner(System.in));
         BaseDonnee.initBaseDonneePseudos();
     }
 
     private static boolean verifieArgumentsPourConnexionBD(String[] args) {
-        if (args.length < 6) {
+        if (args.length < 7) {
             System.out.println(
-                    "Veuillez mettre en argument l' userName, password, dbms, serverName, portNumber de la base de donnée");
+                    "Veuillez mettre en argument l' userName, password, typeBD, serverName, portNumber, nomBD de la base de donnée");
             return false;
         }
         return true;

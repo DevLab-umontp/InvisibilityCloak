@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.TimeZone;
+
 import com.mysql.cj.jdbc.Driver;
 
 import fr.umontpellier.iut.GestionnairePseudonyme;
@@ -29,27 +31,31 @@ public class BaseDonnee {
         String userName = in.nextLine();
         System.out.println("Enter password :");
         String password = in.nextLine();
-        System.out.println("Enter data base name :");
+        System.out.println("Enter type data base (exemple: mysql) :");
         String dbms = in.nextLine();
         System.out.println("Enter server name :");
         String serverName = in.nextLine();
         System.out.println("Enter port number :");
         String portNumber = in.nextLine();
+        System.out.println("Enter data base name :");
+        String nomBD = in.nextLine();
 
-        setConnection(userName, password, dbms, serverName, portNumber);
+        setConnection(userName, password, dbms, serverName, portNumber, nomBD);
     }
 
     public static void setConnection(String userName, String password, String dbms, String serverName,
-            String portNumber) {
+            String portNumber, String nomBD) {
         Properties connectionProps = new Properties();
         connectionProps.put("user", userName);
         connectionProps.put("password", password);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:" + dbms + "://" + serverName + ":" + portNumber + "/",
-                    connectionProps);
+            String url = String.format(
+                    "jdbc:%s://%s:%s/%s?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=%s",
+                    dbms, serverName, portNumber, nomBD, TimeZone.getDefault().getID());
+            connection = DriverManager.getConnection(url, connectionProps);
         } catch (SQLException e) {
-            System.out.println("La connexion n'a pas pu être effectué !");
+            System.out.println("La connexion à la Base de Donnée n'a pas pu être effectué !");
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             System.out.println("Le fichier .jar n'as pas pus être trouvé");

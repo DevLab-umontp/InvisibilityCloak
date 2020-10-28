@@ -11,7 +11,7 @@ CREATE TABLE Pseudos(
 );
 -- 
 DELIMITER //
-CREATE PROCEDURE init_pseudos (MaxPseudo INT) BEGIN WHILE MaxPseudo >= 0
+CREATE PROCEDURE init_pseudos (MaxPseudo INT) BEGIN WHILE MaxPseudo >= 0 DO
 INSERT INTO Pseudos (indexPseudo)
 VALUES (MaxPseudo);
 SET MaxPseudo = MaxPseudo - 1;
