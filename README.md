@@ -40,7 +40,7 @@ Le message anonyme est maintenant disponible sur le channel !
   - `!send {nom-du-channel} {message}` : envoyer un message de manière annonyme sur le channel, en utilisant le nom du channel.
   - `!sendById {ID-du-channel} {message}` : envoyer un message de manière annonyme sur le channel, en utilisant l'ID du channel.
 - Commande secondaire :
-- `!help` : avoir un apperçue des commandes.
-- `!feed-back` : faire un retour sur le bot.
-- `!invite` : pour recevoir le lien pour inviter le bot sur un sevreur discord.
-- `!bug` : pour faire le retour sur un bug.
+  - `!help` : avoir un apperçu des commandes.
+  - `!feed-back` : faire un retour sur le bot.
+  - `!invite` : pour recevoir le lien pour inviter le bot sur un serveur discord.
+  - `!bug` : faire le retour sur un bug rencontré avec le bot.
