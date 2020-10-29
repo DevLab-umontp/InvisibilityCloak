@@ -3,9 +3,9 @@ package fr.umontpellier.iut.commandes.exceptions;
 /**
  * Cette class est utilisé lorsque l'utilisateur qui à envoyer la commande à mal rédigé la commande
  */
-public class UtilisateurAFaitMauvaiseCommandeException extends Exception {
+public class UtilisateurAFaitUneMauvaiseCommandeException extends Exception {
 
-    public UtilisateurAFaitMauvaiseCommandeException(String message) {
+    public UtilisateurAFaitUneMauvaiseCommandeException(String message) {
         super(message);
 	}
 

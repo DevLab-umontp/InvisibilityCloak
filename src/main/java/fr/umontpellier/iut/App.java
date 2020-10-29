@@ -10,21 +10,22 @@ public class App {
     /**
      *
      */
-    private static final JDABuilder ANIMAGUS_BUILDER = new JDABuilder(AccountType.BOT)
+    private static final JDABuilder INVISIBILITY_CLOAK_BUILDER = new JDABuilder(AccountType.BOT)
             .setActivity(Activity.listening("!help")).addEventListeners(new GestionnaireEvents())
             .setCompression(Compression.NONE);
 
     public static void main(String[] args) {
-        verifieArguments(args);
-        JDABuilder builder = ANIMAGUS_BUILDER.setToken(args[0]);
+        verifieArgumentsPourConnexionBotDiscord(args);
+        JDABuilder builder = INVISIBILITY_CLOAK_BUILDER.setToken(args[0]);
         try {
             builder.build();
         } catch (LoginException e) {
-            System.err.println("Un problème est survenue lors de la connexion.\n Veuillez récrire le token");
+            System.err.println(
+                    "Un problème est survenue lors de la connexion du bot Discord.\n Veuillez récrire le token");
         }
     }
 
-    private static void verifieArguments(String[] args) {
+    private static void verifieArgumentsPourConnexionBotDiscord(String[] args) {
         if (args.length < 1) {
             throw new IllegalArgumentException("Veuillez mettre en argument le token du bot discord");
         }

@@ -2,6 +2,8 @@ package fr.umontpellier.iut.commandes;
 
 import java.util.HashMap;
 
+import fr.umontpellier.iut.commandes.send.SendById;
+import fr.umontpellier.iut.commandes.send.SendByName;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 /**
@@ -27,7 +29,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 public class RepertoireCommandes {
 
     /**
-     * Répertoire des commandes. Cet repertoire relie le mot clé à une commande.
+     * Répertoire des commandes. Ce repertoire relie le mot clé à une commande.
      * 
      * @see HashMap
      * @see Commande
@@ -38,6 +40,7 @@ public class RepertoireCommandes {
         REPERTOIRE_DES_COMMANDES.put("help", new Help());
         REPERTOIRE_DES_COMMANDES.put("bug", new Bug());
         REPERTOIRE_DES_COMMANDES.put("bogue", new Bug());
+        REPERTOIRE_DES_COMMANDES.put("invite", new Invite());
         REPERTOIRE_DES_COMMANDES.put("send", new SendByName());
         REPERTOIRE_DES_COMMANDES.put("sendbyname", new SendByName());
         REPERTOIRE_DES_COMMANDES.put("sendbyid", new SendById());
