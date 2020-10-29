@@ -9,8 +9,8 @@ class RequetesSQL {
     }
 
     private static final String SELECT_INDEX_PSEUDO = "SELECT indexPseudo FROM Affection WHERE idUser = %s AND idGuild = %s;";
-    private static final String RECUPERE_PSEUDO_NON_UTILISE = "CALL recupere_pseudo_non_utilise(%s);";
-    private static final String INSERT_INTO_PSEUDOS = "INSERT INTO Affection(idUser,iGuild,indexPseudo) VALUES(%s,%s,%s);";
+    private static final String RECUPERE_PSEUDO_NON_UTILISE = "SELECT recupere_pseudo_non_utilise(%s);";
+    private static final String INSERT_INTO_AFFECTION = "INSERT INTO Affection(idUser,iGuild,indexPseudo) VALUES(%s,%s,%s);";
     private static final String DELETE_ROW_WHERE = "DELETE FROM Affection WHERE idUser=%s AND idGuild = %s;";
 
     static final String DROP_TABLE_PSEUDOS = "DROP TABLE Pseudos;";
@@ -19,7 +19,7 @@ class RequetesSQL {
             GestionnairePseudonyme.getNbHarryPotterPersonnages());
 
     static String insertIntoTablePseudos(long idUser, long idGuild, int indexPseudo) {
-        return String.format(INSERT_INTO_PSEUDOS, idUser, idGuild, indexPseudo);
+        return String.format(INSERT_INTO_AFFECTION, idUser, idGuild, indexPseudo);
     }
 
     static String recuperePseudoNonUtilise(long idGuild) {
