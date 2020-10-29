@@ -14,7 +14,7 @@ public interface SetPseudo extends Commande {
         String feedBack;
         String[] messageSplit = messageRecue.getContentRaw().split(" ", 2);
         if (messageSplit.length != 2)
-            feedBack = "Je n'ai malheureusement pas comprit votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr";
+            feedBack = "Je n'ai malheureusement pas compris votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr";
         else
             feedBack = executeSetPseudo(messageRecue.getAuthor(), messageSplit);
         messageRecue.getChannel().sendMessage(feedBack).queue();
