@@ -10,8 +10,8 @@ class RequetesSQL {
 
     private static final String SELECT_INDEX_PSEUDO = "SELECT indexPseudo FROM Affection WHERE idUser = %s AND idGuild = %s;";
     private static final String RECUPERE_PSEUDO_NON_UTILISE = "SELECT recupere_pseudo_non_utilise(%s);";
-    private static final String INSERT_INTO_AFFECTION = "INSERT INTO Affection(idUser,iGuild,indexPseudo) VALUES(%s,%s,%s);";
-    private static final String DELETE_ROW_WHERE = "DELETE FROM Affection WHERE idUser=%s AND idGuild = %s;";
+    private static final String INSERT_INTO_AFFECTION = "INSERT INTO Affection(idUser,idGuild,indexPseudo) VALUES(%s,%s,%s);";
+    private static final String DELETE_ROW_WHERE = "DELETE FROM Affection WHERE idUser = %s AND idGuild = %s;";
 
     static final String DROP_TABLE_PSEUDOS = "DROP TABLE Pseudos;";
     static final String CREATE_TABLE_PSEUDOS = "CREATE TABLE Pseudos( indexPseudo INT(3), CONSTRAINT pk_Pseudos PRIMARY KEY (indexPseudo) );";
@@ -31,6 +31,6 @@ class RequetesSQL {
     }
 
     static String deleteAffection(long idUser, long idGuild) {
-        return String.format(RequetesSQL.DELETE_ROW_WHERE, idUser, idGuild);
+        return String.format(DELETE_ROW_WHERE, idUser, idGuild);
     }
 }
