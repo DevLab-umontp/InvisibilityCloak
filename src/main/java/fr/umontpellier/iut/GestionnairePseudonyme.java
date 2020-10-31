@@ -11,7 +11,7 @@ public class GestionnairePseudonyme {
         }
 
         public static String getMessageNominationParLaCape(int indexPseudo) {
-                return String.format("Ça y est la *Cape* a prit sa décision et vous a nommé %s%n%s",
+                return String.format("Ça y est la *Cape* a prit sa décision et vous a nommé **%s**%n%s",
                                 getDenomination(indexPseudo), getDescription(indexPseudo));
         }
 
