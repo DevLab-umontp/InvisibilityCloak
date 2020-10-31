@@ -6,20 +6,19 @@ CREATE TABLE Affection (
 );
 -- 
 CREATE TABLE Pseudos(
-  indexPseudo INT(3),
+  indexPseudo INT(3) UNSIGNED,
   CONSTRAINT pk_Pseudos PRIMARY KEY (indexPseudo)
 );
 -- 
-DELIMITER //
+DELIMITER / /
 CREATE OR REPLACE PROCEDURE init_pseudos (MaxPseudo INT) BEGIN WHILE MaxPseudo >= 0 DO
 INSERT INTO Pseudos (indexPseudo)
 VALUES (MaxPseudo);
 SET MaxPseudo = MaxPseudo - 1;
 END WHILE;
 END init_pseudos;
-//
--- 
-DELIMITER //
+/ /
+DELIMITER / /
 CREATE OR REPLACE FUNCTION recupere_pseudo_non_utilise (idGuild_p BIGINT UNSIGNED) RETURNS INT BEGIN
 DECLARE resultat INT;
 SELECT * INTO resultat
@@ -33,4 +32,4 @@ ORDER BY RAND()
 LIMIT 1;
 RETURN resultat;
 END;
-//
+/ /
