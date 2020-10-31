@@ -52,6 +52,7 @@ public class RepertoireCommandes {
         REPERTOIRE_DES_COMMANDES.put("feed-back", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("feedback", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("setpseudo", new SetPseudoNomGuilde());
+        REPERTOIRE_DES_COMMANDES.put("setpseudoid", new SetPseudoIDGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudonomguilde", new SetPseudoNomGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudoidguilde", new SetPseudoIDGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudoidchannel", new SetPseudoIDChannel());
