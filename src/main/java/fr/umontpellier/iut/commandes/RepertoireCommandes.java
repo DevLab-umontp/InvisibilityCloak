@@ -92,4 +92,15 @@ public class RepertoireCommandes {
         throw new IllegalStateException("Utility class");
     }
 
+    /**
+     * @param nomCommande
+     * @return {@code Commande} associé au {@code String} donné en paramètre
+     * @see java.util.HashMap#get(java.lang.Object)
+     */
+    public static Commande getCommande(String nomCommande) {
+        if (nomCommande.charAt(0) == '!')
+            nomCommande = nomCommande.substring(1);
+        return REPERTOIRE_DES_COMMANDES.get(nomCommande);
+    }
+
 }

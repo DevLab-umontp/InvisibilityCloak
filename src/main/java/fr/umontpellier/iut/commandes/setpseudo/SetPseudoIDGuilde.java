@@ -7,6 +7,9 @@ import fr.umontpellier.iut.outils.ChercheurGuildeMutuelle;
 import net.dv8tion.jda.api.entities.User;
 
 public class SetPseudoIDGuilde implements SetPseudo {
+    private static final String MESSAGE_AIDE = "La commande SetPseudoId s'utilise de cette manière :\n`!SetPseudoIdG {ID-du-Serveur}`\n"
+            + ChercheurGuildeMutuelle.MESSAGE_AIDE_ID_GUILDE;
+
     @Override
     public long getIdGuild(String idGuild, User user) throws UtilisateurAFaitUneMauvaiseCommandeException {
         try {
@@ -15,4 +18,10 @@ public class SetPseudoIDGuilde implements SetPseudo {
             throw new UtilisateurAFaitUneMauvaiseCommandeException(e.getMessage());
         }
     }
+
+    @Override
+    public String getMessageAide() {
+        return MESSAGE_AIDE;
+    }
+    
 }

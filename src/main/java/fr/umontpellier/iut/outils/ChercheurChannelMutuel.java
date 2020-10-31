@@ -9,6 +9,7 @@ import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
 public class ChercheurChannelMutuel {
+    public static final String MESSAGE_AIDE_ID_CHANNEL = "Pour récupérer l'ID d'un channel il suffit de faire un clic droit sur l'onglet du channel en question et cliquer sur \"Copier l'ID\"";
 
     public static TextChannel getTextChannelAvecId(String idChannel, User user)
             throws IDTextChannelFormatException, IDTextChannelIntrouvableException {

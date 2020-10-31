@@ -15,8 +15,7 @@ interface Send extends Commande {
         User user = messageRecue.getAuthor();
         try {
             if (messageSplit.length != 3)
-                throw new UtilisateurAFaitUneMauvaiseCommandeException(
-                        "Je n'ai malheureusement pas compris votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr");
+                throw new UtilisateurAFaitUneMauvaiseCommandeException(getMessageAide());
             TextChannel channel = getTextChannel(messageSplit[1], user);
             String pseudo = BaseDonnee.getPseudoSinonAttribuePseudoEtAvertieUser(channel, user);
             channel.sendMessage(pseudo + '\n' + messageSplit[2]).queue();
@@ -26,4 +25,7 @@ interface Send extends Commande {
     }
 
     TextChannel getTextChannel(String textChannel, User user) throws UtilisateurAFaitUneMauvaiseCommandeException;
+
+    @Override
+    String getMessageAide();
 }

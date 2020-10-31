@@ -7,6 +7,8 @@ import fr.umontpellier.iut.outils.ChercheurChannelMutuel;
 import net.dv8tion.jda.api.entities.User;
 
 public class SetPseudoIDChannel implements SetPseudo {
+    private static final String MESSAGE_AIDE = "La commande SetPseudoIdChannel s'utilise de cette manière :\n`!SetPseudoIdChannel {ID-du-channel}`\n"
+            + ChercheurChannelMutuel.MESSAGE_AIDE_ID_CHANNEL;
 
     @Override
     public long getIdGuild(String idChannel, User user) throws UtilisateurAFaitUneMauvaiseCommandeException {
@@ -16,4 +18,10 @@ public class SetPseudoIDChannel implements SetPseudo {
             throw new UtilisateurAFaitUneMauvaiseCommandeException(e.getMessage());
         }
     }
+
+    @Override
+    public String getMessageAide() {
+        return MESSAGE_AIDE;
+    }
+
 }
