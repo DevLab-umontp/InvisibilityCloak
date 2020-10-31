@@ -1,5 +1,6 @@
 package fr.umontpellier.iut.commandes.send;
 
+import fr.umontpellier.iut.bd.BaseDonnee;
 import fr.umontpellier.iut.commandes.Commande;
 import fr.umontpellier.iut.commandes.exceptions.UtilisateurAFaitUneMauvaiseCommandeException;
 import net.dv8tion.jda.api.entities.Message;
@@ -15,9 +16,10 @@ interface Send extends Commande {
         try {
             if (messageSplit.length != 3)
                 throw new UtilisateurAFaitUneMauvaiseCommandeException(
-                        "Je n'ai malheureusement pas comprit votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr");
+                        "Je n'ai malheureusement pas compris votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr");
             TextChannel channel = getTextChannel(messageSplit[1], user);
-            channel.sendMessage(messageSplit[2]).queue();
+            String pseudo = BaseDonnee.getPseudoSinonAttribuePseudoEtAvertieUser(channel, user);
+            channel.sendMessage(pseudo + '\n' + messageSplit[2]).queue();
         } catch (UtilisateurAFaitUneMauvaiseCommandeException e) {
             messageRecue.getChannel().sendMessage(e.getMessage()).queue();
         }
