@@ -102,13 +102,12 @@ public class BaseDonnee {
         try (Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(RequetesSQL.recuperePseudoNonUtilise(idGuild));
             if (rs.next()) {
-                indexPseudo = rs.getInt("indexPseudo");
+                indexPseudo = rs.getInt(1);
                 stmt.execute(RequetesSQL.insertIntoTablePseudos(idUser, idGuild, indexPseudo));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return indexPseudo;
     }
 
