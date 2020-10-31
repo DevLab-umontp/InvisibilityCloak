@@ -18,8 +18,8 @@ public class App {
             .setCompression(Compression.NONE);
 
     public static void main(String[] args) {
-        initBotDiscord(args);
         initBaseDonnee(args);
+        initBotDiscord(args);
     }
 
     private static void initBaseDonnee(String[] args) {
