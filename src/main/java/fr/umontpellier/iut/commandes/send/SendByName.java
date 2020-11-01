@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.User;
 
 public class SendByName implements Send {
-    private static final String MESSAGE_AIDE = "La commande SendByName s'utilise de cette manière :\n`!SendByName {Nom-du-channel} {Votre-message-annonyme}`\n";
+    private static final String MESSAGE_AIDE = "La commande send s'utilise de cette manière :\n`!send {Nom-du-channel} {Votre-message-annonyme}`\n";
 
     @Override
     public TextChannel getTextChannel(String nomTextChannel, User user)

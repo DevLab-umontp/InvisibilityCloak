@@ -7,7 +7,7 @@ import fr.umontpellier.iut.outils.ChercheurGuildeMutuelle;
 import net.dv8tion.jda.api.entities.User;
 
 public class SetPseudoNomGuilde implements SetPseudo {
-    private static final String MESSAGE_AIDE = "La commande SetPseudoNom s'utilise de cette manière :\n`!SetPseudoNom {Nom-du-serveur}`\n";
+    private static final String MESSAGE_AIDE = "La commande SetPseudo s'utilise de cette manière :\n`!SetPseudo {Nom-du-serveur}`\n";
 
     @Override
     public long getIdGuild(String nomGuilde, User user) throws UtilisateurAFaitUneMauvaiseCommandeException {

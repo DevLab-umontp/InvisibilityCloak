@@ -7,7 +7,7 @@ import fr.umontpellier.iut.outils.ChercheurGuildeMutuelle;
 import net.dv8tion.jda.api.entities.User;
 
 public class SetPseudoIDGuilde implements SetPseudo {
-    private static final String MESSAGE_AIDE = "La commande SetPseudoId s'utilise de cette manière :\n`!SetPseudoIdG {ID-du-Serveur}`\n"
+    private static final String MESSAGE_AIDE = "La commande SetPseudoById s'utilise de cette manière :\n`!SetPseudoId {ID-du-Serveur}`\n"
             + ChercheurGuildeMutuelle.MESSAGE_AIDE_ID_GUILDE;
 
     @Override
