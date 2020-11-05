@@ -504,7 +504,7 @@ public class GestionnairePseudonyme {
                         "Vous êtes un Mangemort", //
                         "Vous êtes un disciple de Gellert Grindelwald.", //
                         "Vous êtes la patronne du pub Les Trois Balais à Pré-au-Lard.", //
-                        "Féléiciation, Vous êtes un Mangemort.", //
+                        "Félicitation, Vous êtes un Mangemort.", //
                         "Vous êtes un fonctionnaire au ministère de la Magie. Vous êtes Haut-Placé au Ministère après la prise au pouvoir de Voldemort. Vous êtes en bons termes avec les Mangemorts et avec Dolores Ombrage. Vous vous faite respecter par l'intimidation au sein du ministère. Vous êtes un partisan des idées de Voldemort. ", //
                         "Vous faite partie des membres du personnel de Poudlard.", //
                         "Vous êtes un fafleur qui fait partie du groupe de Greyback.", //
