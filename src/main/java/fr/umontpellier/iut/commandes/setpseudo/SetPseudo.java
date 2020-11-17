@@ -14,7 +14,7 @@ interface SetPseudo extends Commande {
         String feedBack;
         String[] messageSplit = messageRecue.getContentRaw().split(" ", 2);
         if (messageSplit.length != 2)
-            feedBack = "Je n'ai malheureusement pas compris votre commande, voici toutes les commandes dont je dispose :\nhttp://commandes.InvisibilityCloak.umontp.fr";
+            feedBack = getMessageAide();
         else
             feedBack = executeSetPseudo(messageSplit[1], messageRecue.getAuthor());
         messageRecue.getChannel().sendMessage(feedBack).queue();
@@ -31,4 +31,7 @@ interface SetPseudo extends Commande {
     }
 
     long getIdGuild(String designationGuild, User user) throws UtilisateurAFaitUneMauvaiseCommandeException;
+
+    @Override
+    String getMessageAide();
 }

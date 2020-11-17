@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;
 
 public class ChercheurGuildeMutuelle {
+    public static final String MESSAGE_AIDE_ID_GUILDE = "Pour récupérer l'ID d'une guilde il suffit de faire un clic droit sur l'icone du serveur en question et cliquer sur \"Copier l'ID\"";
 
     public static Guild getGuildeMutelleAvecIdGuilde(String designasionGuild, User user)
             throws IDGuildeIntrouvableException, IDGuildeFormatException {

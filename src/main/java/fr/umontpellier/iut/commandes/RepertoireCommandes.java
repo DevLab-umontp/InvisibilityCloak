@@ -52,6 +52,8 @@ public class RepertoireCommandes {
         REPERTOIRE_DES_COMMANDES.put("feed-back", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("feedback", new FeedBack());
         REPERTOIRE_DES_COMMANDES.put("setpseudo", new SetPseudoNomGuilde());
+        REPERTOIRE_DES_COMMANDES.put("setpseudobyid", new SetPseudoIDGuilde());
+        REPERTOIRE_DES_COMMANDES.put("setpseudoid", new SetPseudoIDGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudonomguilde", new SetPseudoNomGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudoidguilde", new SetPseudoIDGuilde());
         REPERTOIRE_DES_COMMANDES.put("setpseudoidchannel", new SetPseudoIDChannel());
@@ -90,6 +92,17 @@ public class RepertoireCommandes {
 
     private RepertoireCommandes() {
         throw new IllegalStateException("Utility class");
+    }
+
+    /**
+     * @param nomCommande
+     * @return {@code Commande} associé au {@code String} donné en paramètre
+     * @see java.util.HashMap#get(java.lang.Object)
+     */
+    public static Commande getCommande(String nomCommande) {
+        if (nomCommande.charAt(0) == '!')
+            nomCommande = nomCommande.substring(1);
+        return REPERTOIRE_DES_COMMANDES.get(nomCommande);
     }
 
 }
