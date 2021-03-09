@@ -1,0 +1,7 @@
+@MathieuSoysal
+
+*.java @MathieuSoysal
+
+pom.xml @MathieuSoysal
+
+.github/** @MathieuSoysal
