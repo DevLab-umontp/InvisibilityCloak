@@ -17,7 +17,7 @@ interface Send extends Commande {
             if (messageSplit.length != 3)
                 throw new UtilisateurAFaitUneMauvaiseCommandeException(getMessageAide());
             TextChannel channel = getTextChannel(messageSplit[1], user);
-            String pseudo = BaseDonnee.getPseudoSinonAttribuePseudoEtAvertieUser(channel, user);
+            String pseudo = BaseDonnee.getPseudoSinonAttribuerUnPseudoEtAvertirUser(channel, user);
             channel.sendMessage(pseudo + '\n' + messageSplit[2]).queue();
         } catch (UtilisateurAFaitUneMauvaiseCommandeException e) {
             messageRecue.getChannel().sendMessage(e.getMessage()).queue();

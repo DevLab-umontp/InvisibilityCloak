@@ -39,7 +39,7 @@ public class GestionnaireEvents extends ListenerAdapter {
         if (botEstAppeleParUtilisateur(event)) {
             Commande cmd = RepertoireCommandes.getCommande(event);
             if (cmd != null)
-                cmd.execute(event.getMessage());
+                new Thread(() -> cmd.execute(event.getMessage())).start();
         }
     }
 
