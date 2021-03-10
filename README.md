@@ -46,3 +46,6 @@ Le message anonyme est maintenant disponible sur le channel !
   - `!feed-back` : faire un retour sur le bot.
   - `!invite` : pour recevoir le lien pour inviter le bot sur un serveur discord.
   - `!bug` : faire le retour sur un bug rencontré avec le bot.
+
+## Mot des contributeurs
+Le projet vous a plu et vous souhaiteriez nous soutenir ? N'hésitez pas à laisser une étoile au projet 🌠 ou encore intégrer la team du DevLab [Invitation DevLab](https://inscription.devlab.umontp.fr/) 😎
