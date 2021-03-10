@@ -48,4 +48,4 @@ Le message anonyme est maintenant disponible sur le channel !
   - `!bug` : faire le retour sur un bug rencontré avec le bot.
 
 ## Mot des contributeurs
-Le projet vous a plu et vous souhaiteriez nous soutenir ? N'hésitez pas à laisser une étoile au projet 🌠 ou encore intégrer la team du DevLab [Invitation DevLab](https://inscription.devlab.umontp.fr/) 😎
+Le projet vous a plu et vous souhaiteriez nous soutenir ? N'hésitez pas à laisser une étoile au projet 🌠 ou encore intégrer la team du DevLab : [Invitation DevLab](https://inscription.devlab.umontp.fr/). 😎
