@@ -2,7 +2,7 @@
 
 # <img src="./ressources/logo.png" alt="Logo" width="125"/> InvisibilityCloak.umontp
 ### IUT Montpellier-Sète – Département Informatique
-* **Colaborateurs:** [étudiants du département informatique](https://iut-montpellier-sete.edu.umontpellier.fr/dut-informatique/)
+* **Collaborateurs:** [étudiants du département informatique](https://iut-montpellier-sete.edu.umontpellier.fr/dut-informatique/)
 
 
 [<img src="./ressources/invitation-bot.png" alt="Invitation du bot InvisibilityCloak sur un serveur Discord" width="180"/>](https://discord.com/oauth2/authorize?client_id=766973211559854091&scope=bot&permissions=0)
